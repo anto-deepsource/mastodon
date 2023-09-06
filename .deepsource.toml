@@ -3,17 +3,18 @@ version = 1
 test_patterns = ["app/javascript/mastodon/**/__tests__/**"]
 
 exclude_patterns = [
-    "db/migrate/**",
-    "db/post_migrate/**"
+  "db/migrate/**",
+  "db/post_migrate/**"
 ]
 
 [[analyzers]]
+name = "secrets"
+
+[[analyzers]]
 name = "ruby"
-enabled = true
 
 [[analyzers]]
 name = "javascript"
-enabled = true
 
   [analyzers.meta]
   environment = [

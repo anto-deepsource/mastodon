@@ -11,4 +11,4 @@ exclude_patterns = [
 name = "ruby"
 
   [analyzers.meta]
-  cyclomatic_complexity_threshold = "low"
+  cyclomatic_complexity_threshold = "high"

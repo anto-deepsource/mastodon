@@ -8,20 +8,7 @@ exclude_patterns = [
 ]
 
 [[analyzers]]
-name = "secrets"
-
-[[analyzers]]
 name = "ruby"
 
   [analyzers.meta]
   cyclomatic_complexity_threshold = "high"
-
-[[analyzers]]
-name = "javascript"
-
-  [analyzers.meta]
-  environment = [
-    "browser",
-    "jest",
-    "nodejs"
-  ]

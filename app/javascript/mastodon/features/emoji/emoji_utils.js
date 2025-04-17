@@ -135,7 +135,7 @@ function getData(emoji, skin, set) {
       }
     }
 
-    if (data.short_names.hasOwnProperty(emoji)) {
+    if (Object.prototype.hasOwnProperty.call(data.short_names, emoji)) {
       emoji = data.short_names[emoji];
     }
 

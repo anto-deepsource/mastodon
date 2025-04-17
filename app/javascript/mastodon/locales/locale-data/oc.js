@@ -5,7 +5,7 @@
 export default [{
   locale: "oc",
   pluralRuleFunction: function (e, a) {
-    return a ? 1 == e ? "one" : "other" : e >= 0 && e < 2 ? "one" : "other";
+    return a ? e == 1 ? "one" : "other" : e >= 0 && e < 2 ? "one" : "other";
   },
   fields: {
     year: {

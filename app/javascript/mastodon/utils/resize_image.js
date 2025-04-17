@@ -127,7 +127,7 @@ const getOrientation = (img, type = 'image/png') => new Promise(resolve => {
 const processImage = (img, { width, height, orientation, type = 'image/png' }) => new Promise(resolve => {
   const canvas  = document.createElement('canvas');
 
-  if (4 < orientation && orientation < 9) {
+  if (orientation > 4 && orientation < 9) {
     canvas.width  = height;
     canvas.height = width;
   } else {

@@ -13,7 +13,7 @@ exports.unicodeToFilename = (str) => {
       }
       result += (0x10000 + ((p - 0xD800) << 10) + (charCode - 0xDC00)).toString(16);
       p = 0;
-    } else if (0xD800 <= charCode && charCode <= 0xDBFF) {
+    } else if (charCode >= 0xD800 && charCode <= 0xDBFF) {
       p = charCode;
     } else {
       if (result.length > 0) {

@@ -743,6 +743,18 @@ export function unpinAccount(id) {
   };
 };
 
+export function unpinAccountId(id) {
+  return (dispatch, getState) => {
+    dispatch(unpinAccountRequest(id));
+
+    api(getState).post(`/api/v1/accounts/${id}/unpin`).then(response => {
+      dispatch(unpinAccountSuccess(response.data));
+    }).catch(error => {
+      dispatch(unpinAccountFail(error));
+    });
+  };
+};
+
 export function pinAccountRequest(id) {
   return {
     type: ACCOUNT_PIN_REQUEST,
